@@ -1,0 +1,879 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "aa9eac73",
+   "metadata": {},
+   "source": [
+    "# INTRODUCTION\n",
+    "\n",
+    "## Exercise hello world!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "25ba447d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    print(\"Hello, World!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "df8495bf",
+   "metadata": {},
+   "source": [
+    "## Python if else"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3abc4aff",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "import os\n",
+    "import random\n",
+    "import re\n",
+    "import sys\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    n = int(raw_input().strip())\n",
+    "if n%2 != 0:\n",
+    "    print \"weird\"\n",
+    "elif n%2 == 0 and 2<=n<=5:\n",
+    "    print \"Not Weird\"\n",
+    "elif n%2 == 0 and 6<=n<=20:\n",
+    "    print \"Weird\"\n",
+    "elif n%2 == 0 and n>20:\n",
+    "    print \"Not Weird\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f2d3ba4b",
+   "metadata": {},
+   "source": [
+    "## arithmetic operators"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "902e196b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    a = int(raw_input())\n",
+    "    b = int(raw_input())\n",
+    "    print(a+b)\n",
+    "    print(a-b)\n",
+    "    print(a*b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f560f1bc",
+   "metadata": {},
+   "source": [
+    "## python ddivision"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "80fd6a3f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from __future__ import division\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    a = int(raw_input())\n",
+    "    b = int(raw_input())\n",
+    "    print(a//b)\n",
+    "    print(a/b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff5dde25",
+   "metadata": {},
+   "source": [
+    "## loops"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "beb7ed92",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    n = int(raw_input())\n",
+    "    for i in range(0,n):\n",
+    "        print(i**2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "70a0be96",
+   "metadata": {},
+   "source": [
+    "## write a function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6fa7f4e8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def is_leap(year):\n",
+    "    leap = False\n",
+    "    \n",
+    "    if year%4==0 and year%100!=0:\n",
+    "        leap = True\n",
+    "    if year%100 == 0 and year%400 == 0:\n",
+    "        leap = True\n",
+    "    \n",
+    "    return leap"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f5d75abc",
+   "metadata": {},
+   "source": [
+    "## print function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dc9fa695",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from __future__ import print_function\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    n = int(raw_input())\n",
+    "    \n",
+    "    for i in range(1,n+1):\n",
+    "        print(i,end='')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5d95397c",
+   "metadata": {},
+   "source": [
+    "# BASIC DATA TYPES\n",
+    "\n",
+    "## list comprehension (HAD HELP!)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eae10ed6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    x = int(raw_input())\n",
+    "    y = int(raw_input())\n",
+    "    z = int(raw_input())\n",
+    "    n = int(raw_input())\n",
+    "    print([[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k != n])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6617a0a9",
+   "metadata": {},
+   "source": [
+    "## find the runner up score"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2882f680",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    n = int(input())\n",
+    "    arr = list(map(int, input().split()))\n",
+    "    mass = max(arr)\n",
+    "    for i in range(len(arr)):\n",
+    "        if arr[i] == mass:\n",
+    "            arr.remove(arr[i])\n",
+    "    print(max(arr))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef4d3d2f",
+   "metadata": {},
+   "source": [
+    "## finding the percentage (LOOKED AT SOLUTION)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aae9ff67",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    n = int(input())\n",
+    "    student_marks = {}\n",
+    "    for _ in range(n):\n",
+    "        name, *line = input().split()\n",
+    "        scores = list(map(float, line))\n",
+    "        student_marks[name] = scores\n",
+    "    query_name = input()\n",
+    "\n",
+    "    if query_name in student_marks:\n",
+    "        x = ((float(student_marks[query_name][0]) + float(student_marks[query_name][1]) + float(student_marks[query_name][2])) / 3)\n",
+    "    \n",
+    "    print('%.2f' % x)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9b1694d3",
+   "metadata": {},
+   "source": [
+    "## nested lists (looked at possible solutions)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5265f2ea",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    marks = {}\n",
+    "    n = int(input())\n",
+    "    for x in range(n):\n",
+    "        name = input()\n",
+    "        mark= float(input())\n",
+    "    \n",
+    "        if mark in marks:\n",
+    "            marks[mark].append(name)\n",
+    "        else:\n",
+    "            marks[mark] = [name]\n",
+    "        \n",
+    "    all_marks = list(set(marks.keys()))\n",
+    "    all_marks.sort()\n",
+    "    names_ordered = marks[all_marks[1]]\n",
+    "    names_ordered.sort()\n",
+    "    \n",
+    "    for name in names_ordered:\n",
+    "        print(name)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d2f53492",
+   "metadata": {},
+   "source": [
+    "## sWAP cASE"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ab9d526d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def swap_case(s):\n",
+    "    return ''.join(list(map(str.swapcase,s)))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "98e76fe3",
+   "metadata": {},
+   "source": [
+    "## tuples (looked at built in python function to help)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bc1d518d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    n = int(input())\n",
+    "    integer_list = tuple((map(int, input().split())))\n",
+    "    print(hash(integer_list))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2cee1918",
+   "metadata": {},
+   "source": [
+    "# STRINGS"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e33e192b",
+   "metadata": {},
+   "source": [
+    "## string split and join"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f6789e05",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def split_and_join(line):\n",
+    "    line = line.split()\n",
+    "    line = \"-\".join(line)\n",
+    "    return line\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    line = input()\n",
+    "    result = split_and_join(line)\n",
+    "    print(result)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1689ff71",
+   "metadata": {},
+   "source": [
+    "## what's your name?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fe640a5a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def print_full_name(first, last):\n",
+    "    first = first_name\n",
+    "    last = last_name\n",
+    "    line = \"Hello {} {}! You just delved into python.\"\n",
+    "    print(line.format(first, last))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5b3f8437",
+   "metadata": {},
+   "source": [
+    "## find a string (looked at the solutions)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b31688c1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def count_substring(string, sub_string):\n",
+    "    count = 0\n",
+    "    for i in range(len(string)-len(sub_string)+1):\n",
+    "        if string[i:i+len(sub_string)] == sub_string:\n",
+    "            count += 1\n",
+    "    return count"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2228ad73",
+   "metadata": {},
+   "source": [
+    "## string validators"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "da04c4a2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    s = input()\n",
+    "\n",
+    "truth = False\n",
+    "for i in s:\n",
+    "    if i.isalnum():\n",
+    "        truth = True\n",
+    "        break\n",
+    "print(truth)\n",
+    "truth = False\n",
+    "for i in s:\n",
+    "    if i.isalpha():\n",
+    "        truth = True\n",
+    "        break\n",
+    "print(truth)\n",
+    "truth = False\n",
+    "for i in s:\n",
+    "    if i.isdigit():\n",
+    "        truth = True\n",
+    "        break\n",
+    "print(truth)\n",
+    "truth = False\n",
+    "for i in s:\n",
+    "    if i.islower():\n",
+    "        truth = True\n",
+    "        break\n",
+    "print(truth)\n",
+    "truth = False\n",
+    "for i in s:\n",
+    "    if i.isupper():\n",
+    "        truth = True\n",
+    "        break\n",
+    "print(truth)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8fadb25d",
+   "metadata": {},
+   "source": [
+    "## no idea (couldn't figure the solution out and did not understand the online answer)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0dc11af0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def felicita(happy, A, B):\n",
+    "    felice = len(happy.intersection(A))\n",
+    "    sad = len(happy.intersection(B))\n",
+    "    return felice - sad\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    m,n = list(map(int,input().split()))\n",
+    "    happy = set(map(int,input().split()))\n",
+    "    A = set(map(int,input().split()))\n",
+    "    B = set(map(int,input().split()))\n",
+    "    print(felicita(happy, A, B))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "86140eac",
+   "metadata": {},
+   "source": [
+    "## collections.counter()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c0420218",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from collections import Counter\n",
+    "\n",
+    "n_shoes = int(input())\n",
+    "misura_scarpe = Counter(map(int,input().split()))\n",
+    "n_acquirenti = int(input())\n",
+    "\n",
+    "contatore = 0\n",
+    "\n",
+    "for i in range(0,n_acquirenti):\n",
+    "    e,g = map(int,input().split())\n",
+    "    if misura_scarpe[e] != 0:\n",
+    "        contatore = contatore + g\n",
+    "        misura_scarpe[e] -=1\n",
+    "    else:\n",
+    "        del misura_scarpe[e]\n",
+    "\n",
+    "print(contatore)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "effa7ba7",
+   "metadata": {},
+   "source": [
+    "## defaultDict tutorial"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "79c8b281",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from collections import defaultdict\n",
+    "\n",
+    "dizionario = defaultdict(list)\n",
+    "\n",
+    "n,m = map(int,input().split())\n",
+    "\n",
+    "for i in range(1,n+1):\n",
+    "    dizionario[input()].append(str(i))\n",
+    "    \n",
+    "for i in range(m):\n",
+    "    oggetto = input()\n",
+    "    if oggetto in dizionario:\n",
+    "        print(' '.join(dizionario[oggetto]))\n",
+    "    else:\n",
+    "        print(-1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8704fa95",
+   "metadata": {},
+   "source": [
+    "## mutations"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c54f6b21",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def mutate_string(string, position, character):\n",
+    "    frase = list(string)\n",
+    "    frase[position] = character\n",
+    "    frase = ''.join(frase)\n",
+    "    return frase"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "be6cf01b",
+   "metadata": {},
+   "source": [
+    "## text wrap (asked for help)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8028bfc3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def wrap(string, max_width): \n",
+    "    return \"\\n\".join(textwrap.wrap(string, max_width))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "edc2a383",
+   "metadata": {},
+   "source": [
+    "## designer door mat (VIEWED SOLUTION)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cc25cf63",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "N,M = map(int, input().split())\n",
+    "prima_parte = [('.|.'*(2*i+1)).center(M,'-') for i in range(N//2)]\n",
+    "print('\\n'.join(prima_parte + [\"WELCOME\".center(M,'-')] + prima_parte[::-1]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b1a98ab4",
+   "metadata": {},
+   "source": [
+    "## alphabet rangoli (VIEWED SOLUTION)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9c1305b4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def print_rangoli(size):\n",
+    "    nicestring = 'abcdefghijklmnopqrstuvwxyz'[0:size]\n",
+    "    \n",
+    "    for i in range(size-1, -size, -1):\n",
+    "        x = abs(i)\n",
+    "        if x >= 0:    \n",
+    "            riga = nicestring[size:x:-1] + nicestring[x:size]\n",
+    "            print('--'*x + '-'.join(riga) + '--'*x)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c693d392",
+   "metadata": {},
+   "source": [
+    "## string formatting (looked at functions and how they worked to help me)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b6b20cb5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def print_formatted(number):\n",
+    "    l = len(bin(number)[2:])\n",
+    "    for i in range(1,number+1):\n",
+    "        dec = i\n",
+    "        octa = oct(i)[2:]\n",
+    "        esa = hex(i)[2:]\n",
+    "        bina = bin(i)[2:].upper()\n",
+    "        print(str(dec).rjust(l), octa.rjust(l), esa.rjust(l), bina.rjust(l), sep = ' ')\n",
+    "        \n",
+    "if __name__ == '__main__':\n",
+    "    n = int(input())\n",
+    "    print_formatted(n)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9f1a68ca",
+   "metadata": {},
+   "source": [
+    "## THE MINION GAME"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "363cec85",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def minion_game(string):\n",
+    "    Stuart = 0;\n",
+    "    Kevin = 0;\n",
+    "    vow = 'AEIOU'\n",
+    "    st_len = len(string)\n",
+    "    \n",
+    "    for i in range(st_len):\n",
+    "        if string[i] in vow:\n",
+    "            start = i\n",
+    "            end = st_len + 1\n",
+    "            while start <= end:\n",
+    "                Kevin += 1\n",
+    "                start += 1\n",
+    "        else:\n",
+    "            start = i\n",
+    "            end = st_len + 1\n",
+    "            while start <= end:\n",
+    "                Stuart += 1\n",
+    "                start += 1 \n",
+    "    \n",
+    "    if Stuart > Kevin:\n",
+    "        print('Stuart', Stuart)\n",
+    "    elif Stuart < Kevin:\n",
+    "        print('Kevin', Kevin)\n",
+    "    else:\n",
+    "        print('Draw')\n",
+    "\n",
+    "\n",
+    "if __name__ == '__main__':"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "69b23f7f",
+   "metadata": {},
+   "source": [
+    "# SETS"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "942036cc",
+   "metadata": {},
+   "source": [
+    "## introduction to sets (searched functions to round)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4f688bc3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def average(array):\n",
+    "    sets = set(arr)\n",
+    "    N = sum(sets)\n",
+    "    n = len(sets)\n",
+    "    return round((N/n), 3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b0348aeb",
+   "metadata": {},
+   "source": [
+    "# symmetric difference (got help to sort out the function map)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ca051972",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def average(set1,set2):\n",
+    "    setunito = set1.union(set2)\n",
+    "    setint = set1.intersection(set2)\n",
+    "    risultato = sorted(setunito.difference(setint))\n",
+    "    for i in risultato:\n",
+    "        print(i)\n",
+    "    \n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    n , set1 = int(input()), set(map(int, input().split()))\n",
+    "    m , set2 = int(input()), set(map(int, input().split()))\n",
+    "    result = average(set1,set2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e996827e",
+   "metadata": {},
+   "source": [
+    "# ERRORS & EXCEPTIONS"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d574e48f",
+   "metadata": {},
+   "source": [
+    "## Exceptions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bd52a78e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for i in range(int(input())):\n",
+    "    \n",
+    "    try:\n",
+    "        a,b = map(int,input().split())\n",
+    "        print(a//b)\n",
+    "    except ZeroDivisionError as e:\n",
+    "        print(\"Error Code:\", e)\n",
+    "    except ValueError as e:\n",
+    "        print(\"Error Code:\", e)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4128be5c",
+   "metadata": {},
+   "source": [
+    "#  NUMPY"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7a1d7d0e",
+   "metadata": {},
+   "source": [
+    "## Arrays"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "07ca958b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def arrays(arr):\n",
+    "    arr.reverse()\n",
+    "    return numpy.array(arr,float)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c90b68ed",
+   "metadata": {},
+   "source": [
+    "## shape & reshape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e674d52c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "arr = np.array(input().strip().split(' '), int)\n",
+    "print(np.reshape(arr,(3,3)))"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
